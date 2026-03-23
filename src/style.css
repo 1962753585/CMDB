@@ -1,0 +1,97 @@
+:root {
+  --bg: #07111f;
+  --bg-soft: #0d1b2f;
+  --panel: rgba(10, 27, 45, 0.76);
+  --panel-strong: rgba(12, 31, 52, 0.92);
+  --line: rgba(135, 189, 255, 0.16);
+  --line-strong: rgba(135, 189, 255, 0.32);
+  --text: #edf5ff;
+  --muted: #94a9c6;
+  --accent: #63e6be;
+  --accent-strong: #22c55e;
+  --warning: #f59e0b;
+  --danger: #fb7185;
+  --shadow: 0 24px 70px rgba(3, 8, 18, 0.45);
+  color-scheme: dark;
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(99, 230, 190, 0.16), transparent 26%),
+    radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.18), transparent 24%),
+    linear-gradient(145deg, #050b14 0%, #0a1627 45%, #07111f 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(135, 189, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(135, 189, 255, 0.07) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(circle at center, black, transparent 88%);
+  content: "";
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#app .el-button,
+#app .el-card,
+#app .el-input__wrapper,
+#app .el-table,
+#app .el-dialog,
+#app .el-message-box {
+  border-radius: 18px;
+}
+
+#app .el-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+#app .el-input__wrapper,
+#app .el-select__wrapper,
+#app .el-textarea__inner {
+  background: rgba(4, 12, 22, 0.72);
+  box-shadow: 0 0 0 1px rgba(135, 189, 255, 0.12) inset;
+}
+
+#app .el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(135, 189, 255, 0.06);
+  --el-table-border-color: rgba(135, 189, 255, 0.08);
+  --el-table-text-color: var(--text);
+  --el-table-header-text-color: #c9d8ef;
+}
+
+#app .el-button--primary {
+  --el-button-bg-color: linear-gradient(135deg, #63e6be, #2dd4bf);
+  --el-button-border-color: transparent;
+  --el-button-hover-bg-color: #5eead4;
+  --el-button-hover-border-color: transparent;
+  color: #03111b;
+}
+
+#app .el-tag {
+  border-radius: 999px;
+}
